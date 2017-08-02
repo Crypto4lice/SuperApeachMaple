@@ -20,13 +20,13 @@
 
 ## 출력 예
 
-Enter a search string : Jac
+  Enter a search string : Jac
 
-Results:
-Name              | Position         | Separation Date
-------------------------------------------------------
-Jacquelyn Jackson | DBA              |
-Jake Jacobson     | Programmer       |
+  Results:
+  Name              | Position         | Separation Date
+  ------------------------------------------------------
+  Jacquelyn Jackson | DBA              |
+  Jake Jacobson     | Programmer       |
 
 
 ## 제약 조건
