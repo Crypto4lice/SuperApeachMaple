@@ -19,7 +19,7 @@
 >
 
 ## 출력 예
-
+<pre><code>
   Enter a search string : Jac
 
   Results:
@@ -27,7 +27,7 @@
   ------------------------------------------------------
   Jacquelyn Jackson | DBA              |
   Jake Jacobson     | Programmer       |
-
+</code></pre>
 
 ## 제약 조건
 - 맵 배열이나 연관배열을 사용하여 데이터를 구현할 것
