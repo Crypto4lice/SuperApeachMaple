@@ -15,26 +15,27 @@
 | Jacquelyn | Jackson | DBA |  |
 | Sally | Weber | Web Developer | 2015-12-18 |
 
-This is the name2
------------------
+> 사용자가 입력한 글자와 First Name 필드와 Last Name 필드의 데이터를 모두 비교하여 사용자가 입력한 글자를 포함하는 모든 레코드를 출력하는 프로그램을 작성하라.
+>
 
-# This is a h1
-## Thios is a h2
+## 출력 예
+
+Enter a search string : Jac
+
+Results:
+Name              | Position         | Separation Date
+------------------------------------------------------
+Jacquelyn Jackson | DBA              |
+Jake Jacobson     | Programmer       |
 
 
-> this is a blockqute.
-dfgdfgdfg
-> this is a second blockqute.
-### This is a h3
+## 제약 조건
+- 맵 배열이나 연관배열을 사용하여 데이터를 구현할 것
 
-gfjkgldjg
-sfklj
-asfjwsf
-1. sdfsdfjk12
 
-2. sdfjklsdfj
+## 도전 과제
 
-3. dfjje123123123
-
-* dfjfjfj
-* fjsdfklsdfjklsfdjkl
+- 글자 조회 시 대소문자를 구분하도록 프로그램을 수정해보자.
+- Position을 조회하는 옵션을 추가하자.
+- Separation date 가 6개월 이상 된 직원을 조회하는 옵션을 추가하자.
+- 데이터를 파일에서 읽도록 프로그램을 수정해보자.
