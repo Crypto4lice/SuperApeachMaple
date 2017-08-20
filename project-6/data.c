@@ -91,18 +91,67 @@ void nprintStack(nstack *target) {
 //큐(노드)
 typedef struct node_queue {
 	int count;
-	nodePtr ;
+	nodePtr start;
+	nodePtr end;
 }nqueue;
 
-bool isempty(stack target);
-bool isfull(stack target);
-void push(stack *target, int data);
-int pop(stack *target);
-int peak(stack target);
-void printStack(stack target);
+void qinit(nqueue *target) {
+	target->count = 0;
+	target->start = NULL;
+	target->end = NULL;
+};
+
+
+void qpush(nqueue *target, int data) {
+	nodePtr newnode = (nodePtr)malloc(sizeof(nodePtr));
+	newnode->data = data;
+	newnode->link = NULL;
+	if (target->start == NULL) {
+		target->count++;
+		target->start = newnode;
+		target->end = newnode;
+	}
+	else {
+		newnode->link = target->start;
+		target->start = newnode;
+		target->count++;
+	}
+};
+int qpop(nqueue *target) {
+	int result = 0;
+	int i = 0;
+	if (target->count == 0) {
+		return result;
+	}
+	else {
+		nodePtr point = (nodePtr)malloc(sizeof(nodePtr));
+		result = target->end->data;
+		point = target->start;
+		while (i<target->count - 2) {
+			point = point->link;
+			i++;
+		}
+		target->end = point;
+		point->link = NULL;
+		target->count--;
+
+		return result;
+	}
+};
+void printQueue(nqueue *target) {
+	nodePtr point = (nodePtr)malloc(sizeof(nodePtr));
+	point = target->start;
+	while (point != NULL) {
+		printf("%d -> ", point->data);
+		point = point->link;
+	}
+	printf("\n");
+};
 
 void main() {
 	//링크드리스트(노드)
+	/*
+
 	listnode *list1 = (listnode *)malloc(sizeof(listnode));
 	list1->link = NULL;
 
@@ -147,6 +196,26 @@ void main() {
 	printf("%d\n",npop(stack2));
 	nprintStack(stack2);
 
+	*/
+	//큐(노드)
+
+	nqueue *queue = (nqueue *)malloc(sizeof(nqueue));
+
+	qinit(queue);
+
+	qpush(queue, 100);
+	qpush(queue, 200);
+	qpush(queue, 300);
+	qpush(queue, 400);
+	qpush(queue, 500);
+
+	printf("%d\n",qpop(queue));
+	
+	printf("%d\n", qpop(queue));
+
+	//printf("%d , %d \n", queue->start->data, queue->end->data);
+
+	printQueue(queue);
 
 
 
